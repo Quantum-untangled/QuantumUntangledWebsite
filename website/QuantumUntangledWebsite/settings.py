@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Quntangled',     # Enter the name of the datbase
         'USER': 'postgres',       # Enter the user name
-        'PASSWORD': 'root',
+        'PASSWORD': 'root',       # This will be the password you first chose when installing postgreSQL, be sure to change it back to 'root' before commiting and pushing
         'HOST': '127.0.0.1', 
         'PORT': '5432',
     }
