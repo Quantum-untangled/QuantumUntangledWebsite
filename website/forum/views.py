@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Quantum Untangled")
+    return render(request, 'forum/index.html')
