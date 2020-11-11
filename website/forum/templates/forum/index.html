@@ -1,8 +1,18 @@
 {% extends 'forum/base.html' %}
 
 {% block content %}
-    <h1>Quantum Untangled</h1>
-    {% if user.is_authenticated %}
-        <p>User {{ user.username }} is authenticated</p>
-    {% endif %}
+
+<h1>Quantum Untangled</h1>
+{% if user.is_authenticated %}
+    <p>User {{ user.username }} is authenticated</p>
+    <a href="#" onClick="document.getElementById('logoutform').submit()"><button type="button">Logout</button></a>
+    <form id='logoutform' method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <input type="hidden">
+    </form>
+{% else %}
+    <a href="{% url 'signup' %}">Sign up.</a>
+    <a href="{% url 'login' %}">Login.</a>
+{% endif %}
+
 {% endblock %}
