@@ -2,26 +2,24 @@
 
 {% block content %}
 
-<div>
-    <h1>Login to your account</h1>
+<h1>Login to your account</h1>
 
-    {% if form.errors %}
-        <p>The username and/or password you entered are incorrect. Try again.</p>
-    {% endif %}
+{% if form.errors %}
+    <p>The username and/or password you entered are incorrect. Try again.</p>
+{% endif %}
 
-    <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
-        {% for field in form %}
-        <p>
-          {{ field.label_tag }} {{ field }}
-        </p>
-      {% endfor %}
-      <button type="submit">Sign up</button>
-    </form>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    {% for field in form %}
+    <p>
+      {{ field.label_tag }} {{ field }}
+    </p>
+  {% endfor %}
+  <button type="submit">Sign up</button>
+</form>
     
-    <hr>
+<hr>
 
-    <p>Don't have an account yet? <a href="{% url 'signup' %}">Sign up.</a></p>
-</div>
+<p>Don't have an account yet? <a href="{% url 'signup' %}">Sign up.</a></p>
 
 {% endblock %}

@@ -3,6 +3,9 @@
 {% block content %}
 
 <h1>Quantum Untangled</h1>
+
+<hr>
+
 {% if user.is_authenticated %}
     <p>User {{ user.username }} is authenticated</p>
     <a href="#" onClick="document.getElementById('logoutform').submit()"><button type="button">Logout</button></a>
