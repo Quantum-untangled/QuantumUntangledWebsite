@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'forum/css/style.css' %}">
+    {% block styles %}{% endblock %}
 
     <title>Quantum Untangled</title>
 </head>
@@ -13,5 +14,7 @@
     <div class="content">
         {% block content %} {% endblock %}
     </div>
+
+    {% block script %}{% endblock %}
 </body>
 </html>
