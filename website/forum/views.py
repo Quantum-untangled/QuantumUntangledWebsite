@@ -40,7 +40,7 @@ def login(request):
                 django_login(request, user)
                 return redirect('/')
 
-    return render(request, 'forum/login.html', {'form': form})
+    return render(request, 'forum/login-n.html', {'form': form})
 
 def logout(request):
     if request.method == "POST":
