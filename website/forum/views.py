@@ -23,7 +23,7 @@ def sign_up(request):
             django_login(request, user)
             return redirect('/')
 
-    return render(request, 'forum/signup.html', {'form': form})
+    return render(request, 'forum/login.html', {'register_form': form, 'view': 'register'})
 
 def login(request):
     if request.user.is_authenticated:
@@ -40,7 +40,7 @@ def login(request):
                 django_login(request, user)
                 return redirect('/')
 
-    return render(request, 'forum/login-n.html', {'form': form})
+    return render(request, 'forum/login.html', {'login_form': form, 'view': 'login'})
 
 def logout(request):
     if request.method == "POST":
