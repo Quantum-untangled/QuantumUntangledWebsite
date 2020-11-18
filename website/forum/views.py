@@ -6,6 +6,9 @@ from django.contrib.auth import login as django_login
 from .forms import SignUpForm
 
 def index(request):
+    if not request.user.is_authenticated:
+        return redirect(sign_up)
+
     return render(request, 'forum/index.html')
 
 def sign_up(request):
