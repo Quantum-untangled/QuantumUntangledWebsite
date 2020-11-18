@@ -98,6 +98,16 @@ html {
   bottom: 68px;
 
 }
+.error_msg{
+  padding-top: 1em;
+  font-size: x-small;
+  font-weight: bold;
+  color: orangered;
+  text-align: center;
+}
+
+
+
 #login{
   left: 50px;
 }
@@ -106,3 +116,4 @@ html {
 
   left: 450px ;
 }
+
