@@ -17,7 +17,7 @@
     </div>
 
     <div class="icons">
-        <a href="https://www.google.com/"><img src="{% static 'forum/images/logo.png' %}" alt="" ></a>
+        <a href=" "><img src="{% static 'forum/images/logo.png' %}" alt="" ></a>
     </div>
 
     <form id="login"  class="input-group" method="POST" action="{% url 'login' %}">
@@ -27,7 +27,7 @@
         <br><br>
         <button type="submit"  class="submit-btn" name="button">Login</button>
         {% if login_form.errors %}
-            <p>
+            <p class="error_msg">
                 Your username and password didn't match. 
                 Please try again.
             </p>
@@ -38,7 +38,7 @@
         {% csrf_token %}
         {% if form.errors %}
             {% for error in field.errors %}
-                <p>
+                <p class="error_msg" >
                     {{ error }}
                 </p>
             {% endfor %}
@@ -53,7 +53,7 @@
         {% if register_form.errors %}
             {% for field in register_form %}
                 {% for error in field.errors %}
-                    <p>
+                    <p class="error_msg">
                         {{ error }}
                     </p>
                 {% endfor %}
